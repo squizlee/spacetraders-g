@@ -1,4 +1,5 @@
 import React, {SyntheticEvent, useState} from "react";
+import cookie from "react-cookies";
 import axios from "axios";
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
 		try{
 			let userData = await axios.post(`https://api.spacetraders.io/users/${username}/token`)
 			console.log(userData);
+			// TODO: react cookie set token and user name for future requests
 		}catch (error){
 			console.error(error);
 		}

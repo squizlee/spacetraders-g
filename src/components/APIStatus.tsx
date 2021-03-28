@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const APIStatus = () => {
 	const STATES = {
@@ -15,7 +15,7 @@ const APIStatus = () => {
 		};
 		axios
 			.get("https://api.spacetraders.io/game/status")
-			.then((response) => {
+			.then((response : AxiosResponse) => {
 				switch (response.data.status) {
 					case responses.SUCCESS:
 						setCurrState(STATES.SUCCESS);
