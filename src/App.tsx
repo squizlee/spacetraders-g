@@ -1,6 +1,7 @@
 import React from "react";
 import APIStatus from "./components/APIStatus";
 import "./App.css";
+import Register from "./components/Register";
 
 function App() {
 	return (
@@ -10,9 +11,9 @@ function App() {
 
 			<APIStatus />
 
-			<div id="get-started">
-				<h2>Get started</h2>
-			</div>
+			<Register />
+
+
 		</div>
 	);
 }
